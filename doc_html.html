@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Lorem ipsum, dolor sit amet</title>
+    <link href="doc_css.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id = "header"></div>
+    <img src = "img_center.jpg" id = "img_center" >
+    <div id = "footer">
+      <p>Submit your email to be the first to DHUWE</p>
+      <ul>
+        <li>About</li>
+        <li>Privacy policy</li>
+        <li onclick = "getMail()"><a>Contact us</a></li>
+      
+      </ul>
+    </div>
+  </body>
+  <script>
+    function getMail(){
+      var emails=prompt("Please enter your email","mail@service.com");
+    }
+  </script>
+  <?php
+    $listfile = fopen("emails.txt","a+");
+    fwrite($listfile, emails);
+    fclose($listfile);
+  ?>
+</html>
