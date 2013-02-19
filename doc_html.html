@@ -11,19 +11,31 @@
       <ul>
         <li>About</li>
         <li>Privacy policy</li>
-        <li onclick = "getMail()"><a>Contact us</a></li>
+        <li><a>Contact us</a></li>
       
       </ul>
+
+      <form method="post" action="">
+        <input type="text" name="email" placeholder="Your email here">
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </body>
   <script>
-    function getMail(){
-      var emails=prompt("Please enter your email","mail@service.com");
-    }
+   // function getMail(){
+   //   var emails=prompt("Please enter your email","mail@service.com");
+   // }
   </script>
-  <?php
-    $listfile = fopen("emails.txt","a+");
-    fwrite($listfile, emails);
-    fclose($listfile);
+  <?php 
+    if (isset($_POST['email']) && trim($_POST['email']) !== '') {
+
+      $email = trim($_POST['email']).PHP_EOL;
+//      $listfile = fopen("emails.txt","a+");
+//      $emailtext = $_GET["emails"];
+//      fwrite($listfile, $email);
+//      fclose($listfile);
+      $file = 'emails.txt';
+      var_dump(file_put_contents($file, $email, FILE_APPEND | LOCK_EX) );
+    }  
   ?>
 </html>
