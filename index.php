@@ -1,2 +1,2 @@
 <?php
-require 'main_template.php';
+require 'logic.php';
