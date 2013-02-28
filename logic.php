@@ -1,10 +1,10 @@
 <?php
-if(isset($_GET['do'])) {
-  switch($_GET['do']) {
-      case 'about':
+if(isset($_SERVER['PATH_INFO'])) {
+  switch($_SERVER['PATH_INFO']) {
+      case '/about':
           $section = 'about';
           break;
-      case 'form':
+      case '/contact':
           $section = 'form';
           break;
       default:
