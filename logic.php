@@ -12,6 +12,7 @@ if(isset($_GET['do'])) {
           break;
   }
 }
+else {$section = 'main_template';}
 
 if (isset($section)) {
     require $section . '.php';

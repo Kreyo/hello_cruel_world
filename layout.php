@@ -9,9 +9,9 @@
     <div id="footer">
         <p>Submit your email to be the first !</p>
         <ul>
-            <li><a href='about.php'>About</a></li>
+            <li><a href='index.php?do=about'>About</a></li>
             <li>Privacy policy</li>
-            <li><a href='form.php'>Contact us</a></li>
+            <li><a href='index.php?do=form'>Contact us</a></li>
 
         </ul>
 
