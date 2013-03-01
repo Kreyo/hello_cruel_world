@@ -11,9 +11,9 @@
     <div id="footer">
         <p>Submit your email to be the first !</p>
         <ul>
-            <li><a href='/about'>About</a></li>
+            <li><a href='index.php/about'>About</a></li>
             <li>Privacy policy</li>
-            <li><a href='/contact'>Contact us</a></li>
+            <li><a href='index.php/contact'>Contact us</a></li>
 
         </ul>
 
