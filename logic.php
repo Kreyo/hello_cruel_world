@@ -14,6 +14,6 @@ if(isset($_SERVER['PATH_INFO'])) {
 }
 else {$section = 'main_template';}
 
-if (isset($section)) {
+if (isset($section  )) {
     require $section . '.php';
 }
