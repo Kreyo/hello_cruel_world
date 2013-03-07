@@ -3,13 +3,13 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\Slim();
 $app->get('/', function () {
-    require 'main_template.php';
+    require 'templates/main_template.php';
 });
 $app->get('/about', function() {
-   require 'about.php';
+   require 'templates/about.php';
 });
 $app->get('/contact', function() {
-    require 'form.php';
+    require 'templates/form.php';
 });
 $app->get('/view/:secretkey', function($secretkey) {
    if($secretkey == 'pa$$word'){
