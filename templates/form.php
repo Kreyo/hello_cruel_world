@@ -1,5 +1,6 @@
 
     <?php $title='Form' ?>
+    <?php include "assets/header.php" ?>
     <?php
     $emailRecorded = false;
 
@@ -13,19 +14,9 @@
         <?php $title='Thank you!' ?>
     <?php }?>
 
-    <form method="post" action="">
+    <form method="post" action="/contactform-submit">
         <input type="text" name="emaily" placeholder="Your email here">
         <input type="submit" value="Submit!">
     </form>
-    <?php
-    if (isset($_GET['emaily'])) {
-        IF (trim($_GET['emaily']) && trim($_GET['emaily']) != '') {
-            $email = trim($_GET['emaily']).PHP_EOL;
-            $newfile = fopen("emails2.txt", "a+");
-            fwrite($newfile,$email);
-            fclose($newfile);;
-        }
-    }
-    ?>
-    <?php include 'layout.php' ?>
+    <?php include 'assets/footer.php' ?>
 

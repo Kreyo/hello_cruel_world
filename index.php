@@ -13,7 +13,7 @@ $app->get('/contact', function() {
 });
 $app->get('/view/:secretkey', function($secretkey) {
    if($secretkey == 'pa$$word'){
-       $handle = @fopen("emails2.txt", "r");
+       $handle = @fopen("Data/emails2.txt", "r");
        if ($handle) {
            while (($buffer = fgets($handle, 4096)) !== false) {
                echo $buffer;
@@ -26,5 +26,18 @@ $app->get('/view/:secretkey', function($secretkey) {
    }else {
        echo "Ha-ha, sucker!";
    }
+});
+$app->post('/contactform-submit', function(){
+
+    if (isset($_GET['emaily'])) {
+        IF (trim($_GET['emaily']) && trim($_GET['emaily']) != '') {
+            $email = trim($_GET['emaily']).PHP_EOL;
+            $newfile = fopen("Data/emails2.txt", "a+");
+            fwrite($newfile,$email);
+            fclose($newfile);;
+        }
+    }
+
+
 });
 $app->run();

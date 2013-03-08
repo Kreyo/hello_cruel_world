@@ -2,12 +2,12 @@
 <html>
 <head>
     <base href ="/hello_cruel_slim/index.php">
-    <link rel = 'stylesheet' href = 'index_css.css' type="text/css">
+    <link rel = 'stylesheet' href = 'templates/assets/index_css.css' type="text/css">
     <title><?php echo $title ?></title>
 
 </head>
 <body>
-    <img src="img_1.jpg" id="img_center">
+    <img src="templates/assets/img_1.jpg" id="img_center">
     <div id="footer">
         <p>Submit your email to be the first !</p>
         <ul>
