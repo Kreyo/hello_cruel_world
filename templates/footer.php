@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
 
-</head>
-<body>
-<img src="img_1.jpg" id="img_center">
+<img src="assets/img_1.jpg" id="img_center">
 <div id="footer">
     <p>Submit your email to be the first !</p>
     <ul>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <base href ="/hello_cruel_slim/index.php">
-    <link rel = 'stylesheet' href = 'templates/assets/index_css.css' type="text/css">
+    <link rel = 'stylesheet' href = 'templates/assets/style.css' type="text/css">
     <title><?php echo $title ?></title>
 
 </head>

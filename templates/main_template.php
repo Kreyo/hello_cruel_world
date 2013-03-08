@@ -1,4 +1,4 @@
 <?php $title = 'Main Page' ?>
 
-<?php include 'assets/header.php' ?>
-<?php include 'assets/footer.php' ?>
+<?php include 'header.php' ?>
+<?php include 'footer.php' ?>
