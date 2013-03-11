@@ -1,4 +1,4 @@
 <?php $title = 'Main Page' ?>
 
-<?php include 'header.php' ?>
-<?php include 'footer.php' ?>
+<?php require 'header.php' ?>
+<?php require 'footer.php' ?>

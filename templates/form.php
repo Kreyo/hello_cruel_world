@@ -1,6 +1,6 @@
 
     <?php $title='Form' ?>
-    <?php include "header.php" ?>
+    <?php require "header.php" ?>
     <?php
     $emailRecorded = false;
 
@@ -18,5 +18,5 @@
         <input type="text" name="emaily" placeholder="Your email here">
         <input type="submit" value="Submit!">
     </form>
-    <?php include 'footer.php' ?>
+    <?php require 'footer.php' ?>
 
