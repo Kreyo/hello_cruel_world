@@ -4,8 +4,9 @@ $twigView = new \Slim\Extras\Views\Twig();
 $app = new \Slim\Slim(array(
     'view' => $twigView
 ));
-$loader = new Twig_Loader_String();
-$twig = new Twig_Environment($loader);
+$loader = new Twig_Loader_Filesystem('templates/');
+$twig = new Twig_Environment($loader,  array(
+    'cache' => '/Data/cache',));
 $app->get('/', function ($twig) {
     echo $twig->render('main_template.php');
 
