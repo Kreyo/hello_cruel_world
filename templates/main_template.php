@@ -1,4 +1,4 @@
-<?php $title = 'Main Page' ?>
-
-<?php require 'header.php' ?>
-<?php require 'footer.php' ?>
+{% extends "base.html" %}
+{% block title %}Main{% endblock %}
+{% block content %}
+{% endblock %}

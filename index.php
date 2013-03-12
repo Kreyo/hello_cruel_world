@@ -1,15 +1,20 @@
 <?php
 require 'vendor/autoload.php';
+$twigView = new \Slim\Extras\Views\Twig();
+$app = new \Slim\Slim(array(
+    'view' => $twigView
+));
+$loader = new Twig_Loader_String();
+$twig = new Twig_Environment($loader);
+$app->get('/', function ($twig) {
+    echo $twig->render('main_template.php');
 
-$app = new \Slim\Slim();
-$app->get('/', function () {
-    require 'templates/main_template.php';
 });
-$app->get('/about', function() {
-   require 'templates/about.php';
+$app->get('/about', function($twig) {
+    echo $twig->render('about.php');
 });
-$app->get('/contact', function() {
-    require 'templates/form.php';
+$app->get('/contact', function($twig) {
+    echo $twig->render('main_template.php');
 });
 $app->get('/view/:secretkey', function($secretkey) {
    if($secretkey == 'pa$$word'){
