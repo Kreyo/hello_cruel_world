@@ -7,15 +7,15 @@ $app = new \Slim\Slim(array(
 $loader = new Twig_Loader_Filesystem('templates/');
 $twig = new Twig_Environment($loader,  array(
     'cache' => '/Data/cache',));
-$app->get('/', function ($twig) {
-    echo $twig->render('main_template.php');
+$app->get('/', function() use($twig) {
+    echo $twig->render('main_template.html.twig');
 
 });
-$app->get('/about', function($twig) {
-    echo $twig->render('about.php');
+$app->get('/about', function() use($twig) {
+    echo $twig->render('about.html.twig');
 });
-$app->get('/contact', function($twig) {
-    echo $twig->render('main_template.php');
+$app->get('/contact', function() use($twig) {
+    echo $twig->render('form.php.twig');
 });
 $app->get('/view/:secretkey', function($secretkey) {
    if($secretkey == 'pa$$word'){
