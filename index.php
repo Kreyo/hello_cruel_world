@@ -33,6 +33,17 @@ $app->get('/view/:secretkey', function($secretkey) {
        echo "Ha-ha, sucker!";
    }
 });
+$function=new Twig_SimpleFunction('writeThanks', function(){
+
+    $emailRecorded = false;
+    if (isset($_POST['emaily'])) {
+        $emailRecorded;
+    }
+    if ($emailRecorded) {
+    echo('Thanks!');
+    }
+});
+$twig->addFunction($function);
 $app->post('/contactform-submit', function(){
 
     if (isset($_GET['emaily'])) {

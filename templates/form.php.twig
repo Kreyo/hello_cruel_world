@@ -1,6 +1,8 @@
 {% extends "base.html.twig" %}
 {% block title %}About{% endblock %}
 {% block content %}
+  {% writeThanks %}
+{#
     <?php
     $emailRecorded = false;
 
@@ -13,6 +15,7 @@
         <h3>Thanks!</h3>
         <?php $title='Thank you!' ?>
     <?php }?>
+#}
 
     <form method="post" action="/contactform-submit">
         <input type="text" name="emaily" placeholder="Your email here">
