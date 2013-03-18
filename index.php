@@ -15,7 +15,11 @@ $app->get('/about', function() use($twig) {
     echo $twig->render('about.html.twig');
 });
 $app->get('/contact', function() use($twig) {
-    echo $twig->render('form.php.twig');
+    if(isset($_POST['emaily'])) {
+        $flag=true;
+    }else{ $flag=false;}
+
+    echo $twig->render('form.html.twig', array('flag'));
 });
 $app->get('/view/:secretkey', function($secretkey) {
    if($secretkey == 'pa$$word'){
@@ -33,17 +37,8 @@ $app->get('/view/:secretkey', function($secretkey) {
        echo "Ha-ha, sucker!";
    }
 });
-$function=new Twig_SimpleFunction('writeThanks', function(){
 
-    $emailRecorded = false;
-    if (isset($_POST['emaily'])) {
-        $emailRecorded;
-    }
-    if ($emailRecorded) {
-    echo('Thanks!');
-    }
-});
-$twig->addFunction($function);
+
 $app->post('/contactform-submit', function(){
 
     if (isset($_GET['emaily'])) {

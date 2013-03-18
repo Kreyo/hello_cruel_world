@@ -1,7 +1,11 @@
 {% extends "base.html.twig" %}
-{% block title %}About{% endblock %}
+{% block title %} Contact me! {% endblock %}
 {% block content %}
-  {% writeThanks %}
+    {% if flag %}
+        <h3>Thanks!</h3>
+    {%else%}
+        <h3>Feel free to leave your email here!</h3>
+    {% endif %}
 {#
     <?php
     $emailRecorded = false;
