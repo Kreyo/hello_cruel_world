@@ -6,7 +6,7 @@ $app = new \Slim\Slim(array(
 ));
 $loader = new Twig_Loader_Filesystem('templates/');
 $twig = new Twig_Environment($loader,  array(
-    'cache' => 'Data/cache/',));
+    'cache' => false,));
 $app->get('/', function() use($twig) {
     echo $twig->render('main_template.html.twig');
 
