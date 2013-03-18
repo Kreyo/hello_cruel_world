@@ -39,7 +39,7 @@ $app->get('/view/:secretkey', function($secretkey) {
 });
 
 
-$app->post('/contactform-submit', function(){
+$app->post('/contactform-submit', function() use($twig){
 
     if (isset($_GET['emaily'])) {
         IF (trim($_GET['emaily']) && trim($_GET['emaily']) != '') {
@@ -47,9 +47,11 @@ $app->post('/contactform-submit', function(){
             $newfile = fopen("Data/emails2.txt", "a+");
             fwrite($newfile,$email);
             fclose($newfile);;
-        }
-    }
 
+        }
+
+    }
+echo $twig->render('form.html.twig', array('flag' => 'false'));
 
 });
 $app->run();
